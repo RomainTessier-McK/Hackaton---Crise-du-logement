@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+montreal-housing-app/node_modules/
+
+# Build output
+dist/
+montreal-housing-app/dist/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Large raw data exceeding GitHub's 100MB file limit (re-downloadable)
+98-401-X2021013_eng_CSV/98-401-X2021013_English_CSV_data.csv
+98-401-X2021013_eng_CSV.zip
+Raw data/lfsa000b21a_e.zip
+Raw data/lfsa000b21a_e/
+Raw data/34100156-eng.zip
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
