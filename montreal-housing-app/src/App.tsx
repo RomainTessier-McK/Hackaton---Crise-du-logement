@@ -5,8 +5,10 @@ import StirScore from "./modules/StirScore";
 import SubsidyGap from "./modules/SubsidyGap";
 import StressCluster from "./modules/StressCluster";
 import RentPulse from "./modules/RentPulse";
+import AcquisitionRisk from "./modules/AcquisitionRisk";
+import ListingsBrowser from "./modules/ListingsBrowser";
 
-type TabId = "overview" | "stir" | "subsidy" | "cluster" | "rentpulse";
+type TabId = "overview" | "stir" | "subsidy" | "cluster" | "rentpulse" | "acquisition" | "listings";
 
 interface Tab {
   id: TabId;
@@ -22,6 +24,8 @@ const TABS: Tab[] = [
   { id: "subsidy", label: "Subsidy Gap Finder", ico: "◰", tag: "City", section: "Products" },
   { id: "cluster", label: "Stress Cluster Alert", ico: "◍", tag: "Orgs", section: "Products" },
   { id: "rentpulse", label: "Rent Pulse Montréal", ico: "◑", tag: "CMHC", section: "Products" },
+  { id: "acquisition", label: "Acquisition & Risk", ico: "◆", tag: "Centris", section: "Live market" },
+  { id: "listings", label: "Listings Browser", ico: "▦", tag: "Photos", section: "Live market" },
 ];
 
 export default function App() {
@@ -70,6 +74,8 @@ export default function App() {
           {tab === "subsidy" && <SubsidyGap />}
           {tab === "cluster" && <StressCluster />}
           {tab === "rentpulse" && <RentPulse />}
+          {tab === "acquisition" && <AcquisitionRisk />}
+          {tab === "listings" && <ListingsBrowser />}
         </div>
       </main>
     </div>
